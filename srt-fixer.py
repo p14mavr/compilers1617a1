@@ -15,9 +15,31 @@ args = parser.parse_args()
 with open(args.fname,newline='') as ifp:	
 	for line in ifp:
 	
-		# -- αντικαταστήστε με τον δικό σας κώδικα (αρχή) --
-
+		 
+		rexp=re.compile(r'(?P<hours>\d{2}):(?P<minutes>\d{2}):(?P<seconds>\d+,\d+))
+		m=rexp.search(line)
+		if(m):
+			hs=float(m.group(hours))
+			ms=float(m.group(minutes))
+			ss=float(m.group(seconds))
+				
+				
+			Secondstotal=hs*360+m*60+ss+offset
+				
 		sys.stdout.write(line)
 
 		# -- αντικαταστήστε με τον δικό σας κώδικα (τέλος) --
 
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
