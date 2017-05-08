@@ -26,9 +26,11 @@ with open(args.fname,newline='') as ifp:
 				
 			Secondstotal=hs*360+m*60+ss+offset
 				
-		sys.stdout.write(line)
+		        sys.stdout.write(Secondstotal)
 
-		# -- αντικαταστήστε με τον δικό σας κώδικα (τέλος) --
+		else:
+				 sys.stdout.write(line)
+			
 
 
 		
