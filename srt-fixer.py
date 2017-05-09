@@ -16,15 +16,15 @@ with open(args.fname,newline='') as ifp:
 	for line in ifp:
 	
 		 
-		rexp=re.compile(r'(?P<hours>\d{2}):(?P<minutes>\d{2}):(?P<seconds>\d+,\d+))
+		rexp=re.compile(r'(?P<hours>\d{2}):(?P<minutes>\d{2}):(?P<seconds>\d+,\d+))  #η κανονική εκφραση που χρησιμοποιησα
 		m=rexp.search(line)
 		if(m):
-			hs=float(m.group(hours))
+			hs=float(m.group(hours))  # η μεθοδος group την τοποθετησα για να διαχωρισω τις ωρες τα λεπτα και δευτερολεπτα
 			ms=float(m.group(minutes))
 			ss=float(m.group(seconds))
 				
 				
-			Secondstotal=hs*360+m*60+ss+offset
+			Secondstotal=hs*360+m*60+ss+offset #εδω προσθετω το offset
 				
 		        sys.stdout.write(Secondstotal)
 
